@@ -3,11 +3,17 @@
 while(1)
 {
 	echo "Entrez un Nombre: ";
-	$line = fgets(STDIN);
-	echo "$line\n";
-	$line = trim ($line);
-	echo "$line\n";
-	$l = feof(STDIN);
-	echo "l = $l";
+	$line = trim(fgets(STDIN));
+	if (feof(STDIN))
+		break;
+	if (!is_numeric($line))
+		echo "'$line' n'est pas un chiffre\n";
+	else
+	{
+		if (($line % 2) == 0)
+			echo "Le chiffre $line est est Pair\n";
+		else
+			echo "Le chiffre $line est est Impair\n";
+	}
 }
 ?>

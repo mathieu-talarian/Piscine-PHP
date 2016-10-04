@@ -1,11 +1,7 @@
 #!/usr/bin/php
 <?PHP
-$var = 0;
-while (++$var < 1001)
-{
+$var = -1;
+while (++$var < 1000)
 	echo ("X");
-	if (($var% 98) == 0)
-		echo ("\n");
-}
 echo "\n";
 ?>
