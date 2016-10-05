@@ -6,16 +6,14 @@ if ($argv[1])
 	$str = trim($argv[1]);
 	$tab = explode(" ", $str);
 	$tab = array_filter($tab);
-	foreach($tab as $key)
+	$cpt = count($tab);
+	$i = 1;
+	while ($i < $cpt)
 	{
-		if ($key != $tab[0])
-			echo("$key ");
+			echo("$tab[$i] ");
+			$i++;
 	}
-	foreach($tab as $key)
-	{
-		if ($key == $tab[0])
-			echo("$key");
-	}
+	echo("$tab[0]");
 	echo "\n";
 }
 ?>

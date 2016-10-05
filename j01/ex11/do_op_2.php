@@ -12,14 +12,16 @@ else
 	{
 		if($tab[1] == "*")
 			echo $tab[0] * $tab[2];
-		if($tab[1] == "-")
+		else if($tab[1] == "-")
 			echo $tab[0] - $tab[2];
-		if($tab[1] == "/")
+		else if($tab[1] == "/")
 			echo $tab[0] / $tab[2];
-		if($tab[1] == "%")
+		else if($tab[1] == "%")
 			echo $tab[0] % $tab[2];
-		if($tab[1] == "+")
+		else if($tab[1] == "+")
 			echo $tab[0] + $tab[2];
+		else
+			echo "Syntax Error";
 		echo "\n";
 	}
 	else
